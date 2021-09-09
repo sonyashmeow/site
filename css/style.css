@@ -1,0 +1,1312 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Mulish:300,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap);
+.subtitle h2 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 139%;
+}
+
+.text {
+  font-family: Mulish;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 176%;
+  color: #7D7987;
+}
+
+.button a {
+  font-family: Mulish;
+  font-weight: bold;
+  font-size: 17px;
+  color: #FFFFFF;
+  line-height: 353%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FB8F1D;
+  border-radius: 8px;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body, html {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  padding: 0px 15px 0px 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.header__container {
+  max-width: 1219px;
+  margin: 0 auto;
+}
+
+.header__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  align-items: center;
+}
+
+.header__logo {
+  flex: 0 0 60px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.header__logo img {
+  max-width: 100%;
+  display: block;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-links {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+.menu-links a {
+  font-size: 16px;
+  color: #B8BECD;
+  transition-duration: 0.4s;
+  position: relative;
+  margin: 0px 0px 0px 34px;
+}
+.menu-links a:hover {
+  font-weight: 500;
+  color: #202336;
+  transition-duration: 0.4s;
+}
+.menu-links a:active {
+  top: 2px;
+  left: 0;
+  transition-duration: 0.4s;
+}
+.menu-links a:first-child {
+  margin: 0;
+}
+.menu-links a:first-child {
+  width: 46px;
+  display: inline-block;
+}
+.menu-links a:nth-child(2) {
+  width: 95px;
+  display: inline-block;
+}
+.menu-links a:nth-child(3) {
+  width: 46px;
+  display: inline-block;
+}
+.menu-links a:nth-child(4) {
+  width: 57px;
+  display: inline-block;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 0px 0px 34px;
+  position: relative;
+  z-index: 3;
+}
+
+.menu-buttons__one a {
+  width: 132px;
+  height: 44px;
+  font-size: 15px;
+  font-family: Inter;
+  color: #FB8F1D;
+  border: 1px solid #FB8F1D;
+  font-weight: 500;
+  background: transparent;
+  transition-duration: 0.4s;
+  position: relative;
+}
+.menu-buttons__one a:hover {
+  background-color: #F4F4F4;
+  transition-duration: 0.4s;
+}
+.menu-buttons__one a:active {
+  top: 5px;
+  left: 0;
+  transition-duration: 0.4s;
+}
+
+.menu-buttons__two {
+  margin: 0px 0px 0px 18px;
+}
+.menu-buttons__two a {
+  width: 132px;
+  height: 44px;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+.menu-buttons__two a:hover {
+  background-color: #E18320;
+  transition-duration: 0.4s;
+}
+.menu-buttons__two a:active {
+  top: 5px;
+  left: 0;
+  transition-duration: 0.4s;
+}
+
+.header__burger {
+  display: none;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-links a {
+    margin: 0px 0px 0px 20px;
+  }
+}
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header {
+    padding: 0 15px 0px 15px;
+  }
+
+  .header__logo {
+    flex: 0 0 40px;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #000;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::before,
+.header__burger::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background: #fff;
+    padding: 90px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+  }
+  .menu-links a {
+    font-size: 24px;
+    width: auto;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .menu-links a:first-child {
+    width: auto;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .menu-links a:nth-child(2) {
+    width: auto;
+    text-align: center;
+  }
+  .menu-links a:nth-child(3) {
+    width: auto;
+    text-align: center;
+  }
+  .menu-links a:nth-child(4) {
+    width: auto;
+    text-align: center;
+  }
+
+  .menu-buttons {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .menu-buttons__one a {
+    background: #fff;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .menu-buttons__two {
+    margin: 0;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+/* Iphone 5 */
+.welcome {
+  padding: 170px 15px 0px 15px;
+  margin: 0px 0px 150px 0px;
+}
+
+.welcome__container {
+  max-width: 1219px;
+  margin: 0 auto;
+}
+
+.welcome__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.welcome__text {
+  margin: 0px 0px 35px 0px;
+}
+
+.welcome__title {
+  width: 356px;
+  margin: 0px 0px 60px 0px;
+}
+.welcome__title h2 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 125%;
+  color: #202336;
+}
+
+.welcome__subtitle {
+  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 45px 0px;
+}
+.welcome__subtitle h2 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #202336;
+}
+.welcome__subtitle::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #202336;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  top: 60px;
+  left: 0;
+}
+
+.welcome__inputs {
+  width: 503px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(197px, 220px));
+  grid-template-rows: repeat(2, 52px);
+  gap: 30px;
+  margin: 0px 0px 25px 0px;
+}
+
+.welcome__select {
+  width: 100%;
+  height: 100%;
+  border: 0.8px solid #AFB0B9;
+  border-radius: 6px;
+  padding: 0 25px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #4A4C53;
+  -webkit-appearance: none;
+          appearance: none;
+  background: url("../img/icons/arrow.svg") no-repeat right;
+  background-position-x: calc(100% - 20px);
+}
+
+.welcome__button a {
+  width: 180px;
+  position: relative;
+  transition-duration: 0.4s;
+}
+.welcome__button a:hover {
+  background-color: #E18320;
+  transition-duration: 0.4s;
+}
+.welcome__button a:active {
+  top: 5px;
+  left: 0;
+  transition-duration: 0.4s;
+}
+
+.welcome__image {
+  margin: 0px 0px 0px 0px;
+}
+.welcome__image img {
+  width: 687px;
+  height: 654px;
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+  .welcome {
+    padding-top: calc(5px + (170 - 5) * ((100vw - 320px) / (1219 - 320)));
+    margin-bottom: calc(30px + (150 - 30) * ((100vw - 320px) / (1219 - 320)));
+  }
+
+  .welcome__title h2 {
+    font-size: calc(30px + (64 - 30) * ((100vw - 320px) / (1219 - 320)));
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcome__image img {
+    width: 100%;
+    height: 654px;
+    object-fit: cover;
+  }
+
+  .welcome__text {
+    margin: 0px 0px 35px 0px;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .welcome__row {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome__image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0px 0px;
+  }
+
+  .welcome__text {
+    text-align: center;
+    padding: 0 15px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+  }
+
+  .welcome__title {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .welcome__subtitle {
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+  }
+  .welcome__subtitle::before {
+    left: 45%;
+  }
+
+  .welcome__inputs {
+    width: 100%;
+  }
+
+  .welcome__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome__selectcontainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .welcome {
+    padding-top: 80px;
+  }
+
+  .welcome__row {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome__image {
+    width: 100%;
+  }
+
+  .welcome__image img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .welcome__text {
+    padding: 0 15px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+  }
+
+  .welcome__title {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .welcome__subtitle {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 40px 0px;
+  }
+  .welcome__subtitle::before {
+    left: 45%;
+  }
+
+  .welcome__inputs {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 52px);
+    row-gap: 20px;
+  }
+
+  .welcome__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome__select:nth-child(1) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+.way {
+  padding: 0px 40px 0px 0px;
+  margin: 0 0 180px 0;
+}
+
+.way__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.way__image {
+  margin: 0px 50px 0px 0px;
+}
+.way__image img {
+  width: 659px;
+  height: 534px;
+}
+
+.way__text {
+  width: 450px;
+}
+
+.way__subtitle {
+  margin: 0px 0px 22px 0px;
+}
+
+.way__description {
+  margin: 0px 0px 33px 0px;
+}
+.way__description p {
+  width: 440px;
+}
+
+.way__button a {
+  width: 164px;
+  height: 48px;
+  position: relative;
+}
+.way__button a:hover {
+  background-color: #E18320;
+  transition-duration: 0.4s;
+}
+.way__button a:active {
+  top: 5px;
+  left: 0;
+  transition-duration: 0.4s;
+}
+
+@media (max-width: 1200px) {
+  .way {
+    margin-bottom: calc(30px + (180 - 30) * ((100vw - 320px) / (1221 - 320)));
+  }
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .way__image {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .way__image img {
+    width: 100%;
+    height: 534px;
+    object-fit: cover;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .way__image img {
+    width: 100%;
+    height: 534px;
+    object-fit: cover;
+    object-position: -170px 0;
+  }
+
+  .way__image {
+    width: 50%;
+    margin: 0px 10px 0px 0px;
+  }
+
+  .way__text {
+    width: 50%;
+  }
+
+  .way__description p {
+    width: 100%;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .way {
+    padding: 0;
+  }
+
+  .way__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .way__image img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+  }
+
+  .way__image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .way__text {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .way__description p {
+    width: 100%;
+  }
+
+  .way__button {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .way__image img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+  }
+
+  .way__description {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .way__description {
+    font-size: 16px;
+  }
+}
+/* Iphone 5 */
+.destinations {
+  padding: 0 15px;
+  margin: 0px 0px 180px 0px;
+}
+
+.destinations__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 56px 0px;
+}
+
+.destinations__subtitle {
+  margin: 0px 0px 10px 0px;
+}
+
+.destinations__link a {
+  font-weight: 600;
+  font-size: 17px;
+  color: #FB8F1D;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.4s;
+  position: relative;
+}
+.destinations__link a span {
+  padding: 0px 10px 0px 0px;
+}
+.destinations__link a:hover {
+  color: #E18320;
+  transition-duration: 0.4s;
+}
+.destinations__link a:active {
+  top: 1px;
+  transition-duration: 0.4s;
+}
+
+.destinations__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.destinations-item__image {
+  width: 261px;
+  height: 332px;
+}
+.destinations-item__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: -80px 0;
+}
+.destinations-item__text {
+  width: 120px;
+  height: 56px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  border-radius: 0px 6px 0px 0px;
+  padding: 11px 0px 0px 0px;
+  margin: -55px 0 0 -2px;
+}
+.destinations-item__title {
+  margin: 0px 0px 8px 0px;
+}
+.destinations-item__title h2 {
+  color: #042521;
+  font-weight: 600;
+  font-size: 17px;
+}
+.destinations-item__subtitle h3 {
+  color: #80918E;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .destinations {
+    margin-bottom: calc(30px + (180 - 30) * ((100vw - 320px) / (1221 - 320)));
+  }
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .destinations-item__image img {
+    width: 97%;
+  }
+
+  .destinations-item__image {
+    width: 245px;
+    height: 332px;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .destinations__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .destinations-item__image img {
+    width: 86%;
+    object-position: -40px 0;
+  }
+
+  .destinations-item__image {
+    width: 100%;
+    height: 332px;
+  }
+
+  .destinations__column {
+    width: 50%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .destinations-item {
+    text-align: center;
+  }
+
+  .destinations-item__text {
+    margin: -55px 0 0 19px;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .destinations__row {
+    flex-wrap: wrap;
+  }
+
+  .destinations-item__image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: -78px 0;
+  }
+
+  .destinations-item__image {
+    width: 100%;
+    height: 332px;
+  }
+
+  .destinations__column {
+    width: 49%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .destinations-item {
+    text-align: center;
+  }
+
+  .destinations-item__text {
+    margin: -55px 0 0 -1px;
+  }
+
+  .destinations__title {
+    margin: 0px 0px 30px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .destinations__row {
+    flex-direction: column;
+  }
+
+  .destinations__column {
+    width: 95%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .destinations-item__image img {
+    object-position: 0px 0;
+    height: 80%;
+  }
+
+  .destinations__title {
+    margin: 0px 0px 26px 0px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .destinations-item__text {
+    margin: -120px 0 0 -1px;
+  }
+}
+/* Iphone 5 */
+.guide {
+  padding: 0 15px;
+  margin: 0px 0px 180px 0px;
+}
+
+.guide__container {
+  margin: 0px 0px 180px 0px;
+}
+
+.guide__row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.guide__text {
+  width: 442px;
+}
+
+.guide__subtitle {
+  margin: 0px 0px 20px 0px;
+}
+
+.guide__description {
+  margin: 0px 0px 40px 0px;
+}
+
+.guide__button a {
+  width: 164px;
+  position: relative;
+}
+.guide__button a:hover {
+  background-color: #E18320;
+  transition-duration: 0.4s;
+}
+.guide__button a:active {
+  top: 5px;
+  transition-duration: 0.4s;
+}
+
+.guide__image img {
+  width: 100%;
+  height: 542px;
+}
+
+@media (max-width: 1200px) {
+  .guide {
+    margin-bottom: calc(30px + (180 - 30) * ((100vw - 320px) / (1221 - 320)));
+  }
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .guide {
+    overflow: hidden;
+  }
+
+  .guide__image {
+    width: 52%;
+  }
+  .guide__image img {
+    width: 107%;
+    object-fit: cover;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .guide {
+    overflow: hidden;
+  }
+
+  .guide__image {
+    width: 52%;
+  }
+  .guide__image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0px 0;
+  }
+
+  .guide__row {
+    justify-content: space-between;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .guide {
+    overflow: hidden;
+  }
+
+  .guide__image {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+  .guide__image img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+  }
+
+  .guide__row {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .guide__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .guide__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .guide__description {
+    font-size: 16px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .guide__image {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+  .guide__image img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+.footer {
+  padding: 80px 15px 0px 15px;
+  background-color: #F9F9FB;
+  color: #848484;
+  font-family: Mulish;
+}
+
+.footer__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 70px 0px;
+  border-bottom: 0.6px solid #C4C4C4;
+}
+
+.description__logo {
+  margin: 0px 0px 26px 0px;
+}
+
+.description__text {
+  margin: 0px 0px 55px 0px;
+  width: 300px;
+}
+.description__text p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 156%;
+}
+
+.description__license h3 {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 165%;
+}
+
+.footer__columns {
+  display: flex;
+}
+
+.footer__column {
+  width: 164px;
+  margin: 0px 0px 0px 100px;
+}
+.footer__column:first-child {
+  margin: 0;
+}
+
+.footer-item__title h2 {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 316%;
+  color: #000000;
+}
+
+.footer-item__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer-item__list a {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 211%;
+  color: #848484;
+}
+
+.footer__links {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link {
+  margin: 0px 30px 0px 0px;
+}
+.footer__link:last-child {
+  margin: 0;
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer__column {
+    width: 164px;
+    margin: 0px 0px 0px 20px;
+  }
+  .footer__column:first-child {
+    margin: 0;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer__column {
+    width: 140px;
+    margin: 0px 0px 0px 20px;
+  }
+  .footer__column:first-child {
+    margin: 0;
+  }
+
+  .description__text {
+    width: 84%;
+  }
+
+  .description__license {
+    width: 84%;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .footer__column {
+    width: 32%;
+    margin: 0px 0px 0px 20px;
+  }
+  .footer__column:first-child {
+    margin: 0;
+  }
+
+  .footer__links {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .footer__columns {
+    justify-content: center;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .footer {
+    padding: 30px 15px 0px 15px;
+  }
+
+  .description__text {
+    margin: 0px 0px 23px 0px;
+    width: 100%;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 15px 0px 15px;
+  }
+
+  .footer__column {
+    width: 25%;
+    margin: 0px 0px 0px 30px;
+  }
+  .footer__column:first-child {
+    margin: 0;
+  }
+
+  .footer-item__title h2 {
+    font-size: 15px;
+  }
+
+  .footer-item__list a {
+    font-size: 15px;
+  }
+
+  .footer__columns {
+    margin: 0;
+  }
+
+  .description__text p {
+    font-size: 16px;
+    line-height: 110%;
+  }
+
+  .description__logo {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .description__text {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .description__license h3 {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .footer-item__list a {
+    font-size: 16px;
+    line-height: 184%;
+  }
+}
+/* Iphone 5 */
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+  .subtitle h2 {
+    font-size: calc(28px + (36 - 28) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 139%;
+    line-height: calc(29px + (45 - 29) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+.container {
+  max-width: 1221px;
+  margin: 0 auto;
+}
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets, телефоны лопаты */
+/* Portrait phones and smaller типа моего 6s */
+/* Iphone 5 */
